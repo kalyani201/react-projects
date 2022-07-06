@@ -5,7 +5,7 @@ const Card = ({ tour, setTour }) => {
     const removeTour = (id) => {
         const newTour = tour.filter((tour) => tour.id !== id)
         setTour(newTour);
-        console.log(newTour)
+        // console.log(newTour)
     }
     return (
         <div>
