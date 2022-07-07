@@ -12,7 +12,6 @@ function App() {
         question.map((question) => {
           return (
             <Question key={question.id} {...question} />
-          
           )
         })
       }
