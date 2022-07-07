@@ -15,6 +15,15 @@ const Review = () => {
         return number;
     }
 
+    const randomPerson = () => {
+        // console.log(Math.random())
+        let randomNumber = Math.floor(Math.random() * data.length)
+        if(randomNumber === index) {
+            randomNumber = index + 1
+        } //2=2 2=3
+        setIndex(checkNumber(randomNumber))
+    }
+
     const prevperson = () => {
         setIndex((index)=> {
             let newIndex = index - 1;
@@ -36,6 +45,7 @@ const Review = () => {
                 <p>{age}</p>
                 <button onClick={prevperson}>prev</button>
                 <button onClick={nextperson}>next</button>
+                <button onClick={randomPerson}>Surprise Me</button>
             </div>
         </div>
     );
